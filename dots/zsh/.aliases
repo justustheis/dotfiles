@@ -49,11 +49,11 @@ alias tools="cd ~/tools"
 ##############################################
 ########## Shortcuts for opening files #######
 ##############################################
-alias hosts="sudo vi /etc/hosts"
-alias aliases="vi ~/.aliases"
-alias vimrc="nvim ~/.vimrc"
-alias zshrc="nvim ~/.zshrc"
-alias notes="nvim ~/notes.md"
+alias hosts="sudo vim /etc/hosts"
+alias aliases="vim ~/.aliases"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias notes="vim ~/notes.md"
 
 
 
@@ -64,9 +64,9 @@ alias notes="nvim ~/notes.md"
 ########## Shortcuts for executing software ##
 ##############################################
 alias s="sudo"
-alias v="nvim"
-alias sv="sudo nvim"
-alias svi="sudo nvim"
+alias v="vim"
+alias sv="sudo vim"
+alias svi="sudo vim"
 alias c="composer"
 alias htop="sudo htop"
 alias t="tmux"
