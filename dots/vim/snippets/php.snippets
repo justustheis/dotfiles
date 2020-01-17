@@ -1,0 +1,46 @@
+snippet met
+	public function ${1}()
+	{
+		${2}
+	}
+
+snippet pmet
+	protected function ${1}()
+	{
+		${2}
+	}
+
+snippet smet
+	public static function ${1}()
+	{
+		${2}
+	}
+
+snippet rg
+	Route::get('${1}', '${2}');
+
+snippet rp
+	Route::post(${1}', '${2}');
+
+snippet rr
+	Route::resouce('${1}', '${2}');
+
+snippet rgr
+	Route::namespace('${1}')->middleware('${2}')->prefix('${3}')->group(function () {
+		${4}
+	});
+
+snippet test
+	/** @test */
+	public function ${1}()
+	{
+		${2}
+	}
+
+snippet /**
+	/**
+	 * ${1}
+	 *
+	 *
+	 */
+

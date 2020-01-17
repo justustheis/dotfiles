@@ -1,0 +1,15 @@
+[user]
+	name = Justus Theis
+	email = j.theis@ds-systems.eu
+	username = justustheis
+	signingkey = F95B8010
+[core]
+	editor = vim
+[color]
+	ui = auto
+[color "branch"]
+  upstream = cyan
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

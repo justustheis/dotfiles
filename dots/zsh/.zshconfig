@@ -1,0 +1,7 @@
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f local/.aliases ]] && source ~/local/.aliases
+[[ -f local/.zshrc ]] && source ~/local/.zshrc
+plugins=(git)
+ZSH_THEME="robbyrussell"
+PROMPT="%{$fg[green]%}%m%{$reset_color%} ${PROMPT}"
