@@ -27,7 +27,8 @@ Plugin 'posva/vim-vue'
 Plugin 'jwalton512/vim-blade'
 
 " Syntax higlight for php
-Plugin 'StanAngeloff/php.vim'
+"Plugin 'StanAngeloff/php.vim'
+Plugin 'tetsuo13/Vim-PHP-Doc'
 
 " Add git to the gutter
 Plugin 'airblade/vim-gitgutter'
