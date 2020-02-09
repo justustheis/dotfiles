@@ -91,11 +91,9 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 
 
 "----------------ctags--------------"
-"set statusline+=%{gutentags#statusline()}
+set statusline+=%{gutentags#statusline()}
 let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules"]
-let g:gutentags_ctags_extra_args = [
-      \ '--regex-php=/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i',
-      \ ]
+"let g:gutentags_ctags_extra_args = ['--regex-php=/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i',]
 "open underlying path
 nmap <Leader>o <C-]>
 
@@ -108,18 +106,6 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
-
-
-
-
-
-"----------------align text--------------"
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=><CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-	vmap <Leader>a: :Tabularize /:\zs<CR>
-end
 
 
 
@@ -175,6 +161,10 @@ let g:ctrlp_show_hidden = 1
 
 
 
+"--------------Ctrlp----------------"
+let g:phpqa_messdetector_autorun = 0
+let g:phpqa_codesniffer_args = "--standard=psr2"
+
 "--------------Buffers----------------"
 augroup buffers
 	function! SwitchBuffer()
@@ -183,8 +173,8 @@ augroup buffers
 augroup END
 nmap <Leader>l :call SwitchBuffer()<CR>
 
-
-
+" Run php-cs-fixer on save
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 
 "--------------Auto-Commands----------------"
