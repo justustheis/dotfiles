@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'mhinz/vim-startify'
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'

@@ -165,6 +165,11 @@ let g:ctrlp_show_hidden = 1
 let g:phpqa_messdetector_autorun = 0
 let g:phpqa_codesniffer_args = "--standard=psr2"
 
+
+
+
+
+
 "--------------Buffers----------------"
 augroup buffers
 	function! SwitchBuffer()
