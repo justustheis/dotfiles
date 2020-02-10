@@ -121,7 +121,7 @@ alias gp="git push"
 ########## Shortcuts for ssh connects ########
 ##############################################
 alias cus-web01="ssh justustheis@cus-web01.ds-systems.eu -i ~/.ssh/jt_ds_rsa -p 2234" 
-alias dev="ssh justustheis@dev.j-theis.de -i ~/.ssh/jt_ds_rsa" 
+alias dev="ssh justustheis@10.88.104.16 -i ~/.ssh/jt_ds_rsa" 
 alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/jt_ds_rsa"
 alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
 alias luna="ssh justustheis@luna.j-theis.de"
