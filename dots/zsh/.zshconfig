@@ -1,3 +1,4 @@
+export GPG_TTY=$(tty)
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f local/.aliases ]] && source ~/local/.aliases
