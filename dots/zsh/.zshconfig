@@ -3,6 +3,24 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f local/.aliases ]] && source ~/local/.aliases
 [[ -f local/.zshrc ]] && source ~/local/.zshrc
-plugins=(git)
+plugins=(
+  git
+  bundler
+  dotenv
+  osx
+  rake
+  rbenv
+  ruby
+  jsontools
+  node
+  pip
+  web-search
+  zsh-autosuggestions
+  colored-man-pages
+  colorize
+  common-aliases
+  copyfile
+)
 ZSH_THEME="robbyrussell"
-PROMPT="%{$fg[green]%}%m%{$reset_color%} ${PROMPT}"
+PROMPT="%{$fg[green]%}%m%{$reset_color%}:$(whoami) ${PROMPT}"
+neofetch --block_width 40 --block_height 1 --block_range 5 5 --colors 1 4 1 5 1 6 Hallo --backend iterm2  --source ~/dotfiles/assets/logo.png --size 300px --crop_mode auto --yoffset 38
