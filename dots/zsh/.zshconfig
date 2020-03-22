@@ -6,10 +6,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 plugins=(
   git
   bundler
-  dotenv
   osx
   rake
-  rbenv
   ruby
   jsontools
   node
