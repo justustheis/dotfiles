@@ -38,7 +38,6 @@
 alias .="cd ~"
 alias ..="cd ../"
 alias home="cd ~"
-alias code="cd ~/code"
 alias tools="cd ~/tools"
 
 
@@ -125,6 +124,7 @@ alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/jt_ds
 alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
 alias homeserv="ssh justustheis@homeserv.trier -i ~/.ssh/jt_ds_rsa" 
 alias dev="ssh justustheis@dev01.trier -i ~/.ssh/jt_ds_rsa" 
+alias code="ssh justustheis@dev01.trier -i ~/.ssh/jt_ds_rsa" 
 alias pihole01="ssh justustheis@pihole01.trier -i ~/.ssh/jt_ds_rsa" 
 alias pihole02="ssh justustheis@pihole02.trier -i ~/.ssh/jt_ds_rsa" 
 
