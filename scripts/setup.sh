@@ -40,6 +40,7 @@ createFolders() {
 createLinks() {
 	info "creating symlinks"
 	ln -s ~/dotfiles/dots/zsh/.aliases ~/.aliases	
+	ln -s ~/dotfiles/dots/vifm ~/.config/vifm	
 	ln -s ~/dotfiles/dots/zsh/.zshconfig ~/.zshconfig	
 	ln -s ~/dotfiles/dots/vim/.vimrc ~/.vimrc	
 	ln -s ~/dotfiles/dots/vim/colors ~/.vim/colors	
