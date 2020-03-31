@@ -13,6 +13,7 @@ set noruler
 set laststatus=0
 set noshowcmd
 set shortmess=F
+set tabstop=2 shiftwidth=2 expandtab
 
 
 
@@ -92,7 +93,7 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 
 "----------------ctags--------------"
 set statusline+=%{gutentags#statusline()}
-let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules"]
+let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules", "*vendor/*/test*", "*vendor/*/Test*", "vendor/*/Test", "vendor/*test", "bootstrap/cache"]
 "let g:gutentags_ctags_extra_args = ['--regex-php=/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i',]
 "open underlying path
 nmap <Leader>o <C-]>
@@ -106,6 +107,8 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+let g:phpqa_messdetector_autorun = 0
+let g:phpqa_codesniffer_args = "--standard=psr2"
 
 
 
@@ -153,18 +156,9 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 
 "--------------Ctrlp----------------"
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|public\|storage\|tags'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|public\|storage\|tags\|vendor'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 let g:ctrlp_show_hidden = 1
-
-
-
-
-
-"--------------Ctrlp----------------"
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_args = "--standard=psr2"
-
 
 
 
