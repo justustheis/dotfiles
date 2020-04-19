@@ -46,6 +46,7 @@ createLinks() {
 	ln -s ~/dotfiles/dots/vim/colors ~/.vim/colors	
 	ln -s ~/dotfiles/dots/vim/snippets ~/.vim/snippets
 	ln -s ~/dotfiles/dots/vim/plugins.vim ~/.vim/plugins.vim
+    git clone https://github.com/arcticicestudio/nord-tmux.git ~/.tmux/themes/nord-tmux 
 	ln -s ~/dotfiles/dots/tmux/.tmux.conf ~/.tmux.conf
 	ln -s ~/dotfiles/dots/git/.gitconfig ~/.gitconfig
 	success

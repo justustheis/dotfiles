@@ -20,11 +20,11 @@ set tabstop=2 shiftwidth=2 expandtab
 
 
 "-------------Visuals--------------"
-colorscheme atom-dark-256
+colorscheme nord
 set t_CO=256										"Use 256 colors. This is useful for Terminal Vim.
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='lucius'
 
 
 
