@@ -14,6 +14,7 @@ set laststatus=0
 set noshowcmd
 set shortmess=F
 set tabstop=2 shiftwidth=2 expandtab
+set mouse=a                                         "Enable mouse support
 
 
 
@@ -42,6 +43,17 @@ set incsearch										"Incrementally highlight, as we type.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+
+
+
+
+"-------------Linebreaks--------------"
+"Set standard hjkl to move inside linebreaks
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
 
 
 
@@ -86,6 +98,8 @@ nmap <Leader>tf :TestFile<cr>
 nmap <Leader>tl :TestLast<cr>
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+"Open terminal inside Vim
+nmap <Leader>tt :vert term<cr>
 
 
 
@@ -94,9 +108,9 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 "----------------ctags--------------"
 set statusline+=%{gutentags#statusline()}
 let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules", "*vendor/*/test*", "*vendor/*/Test*", "vendor/*/Test", "vendor/*test", "bootstrap/cache"]
-"let g:gutentags_ctags_extra_args = ['--regex-php=/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i',]
 "open underlying path
 nmap <Leader>o <C-]>
+
 
 
 
@@ -174,6 +188,9 @@ nmap <Leader>l :call SwitchBuffer()<CR>
 
 " Run php-cs-fixer on save
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+
+
 
 
 "--------------Auto-Commands----------------"
