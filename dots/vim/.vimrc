@@ -7,20 +7,19 @@ set backspace=indent,eol,start                      "Make backspace behave like 
 let mapleader = ',' 						    	"The default is \, but a comma is much better.
 set number relativenumber							"Let's activate line numbers.
 set noerrorbells visualbell t_vb=               	"No damn bells!
-set updatetime=750
-set noshowmode
-set noruler
-set laststatus=0
-set noshowcmd
-set shortmess=F
-set tabstop=2 shiftwidth=2 expandtab
+set updatetime=750                                  "Smaller is better, but smaller than 750 might produce glitches
+set noshowmode                                      "Don't put a 'mode message' on the last line
+set noruler                                         "Don't show the line number and the cursor position 
+set laststatus=0                                    "No Statusline for last window
+set noshowcmd                                       "No partial commands
+set shortmess=F                                     "Avoid 'hit-enter' prompts 
 set mouse=a                                         "Enable mouse support
 
 
 
 
 
-"-------------Visuals--------------"
+"-------------Colorschemes--------------"
 colorscheme nord
 set t_CO=256										"Use 256 colors. This is useful for Terminal Vim.
 let NERDTreeMinimalUI = 1
@@ -40,9 +39,7 @@ set incsearch										"Incrementally highlight, as we type.
 
 
 "-------------Indents--------------"
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=4 shiftwidth=4 expandtab
 
 
 
@@ -96,10 +93,19 @@ nmap <Leader>t :TestNearest<cr>
 nmap <Leader>ts :TestSuite<cr>
 nmap <Leader>tf :TestFile<cr>
 nmap <Leader>tl :TestLast<cr>
+
+"Switch between buffers
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
 "Open terminal inside Vim
 nmap <Leader>tt :vert term<cr>
+
+
+"----------------UltiSnips--------------"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 

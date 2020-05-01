@@ -1,0 +1,160 @@
+global !p
+def getNamespace():
+	relpath = os.path.relpath(path)
+	namespace = relpath.replace('/', '\\')
+	namespace = namespace.replace('\\' + snip.fn, ';')
+	return namespace.title()
+endglobal
+
+snippet class "Class declaration template" b
+<?php
+
+namespace `!p snip.rv = getNamespace()`
+
+class ${1:`!p snip.rv=snip.basename`}
+{
+	/** 
+	 * Create a new $1 instance
+	 *
+	 * @return void
+	*/
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+	$0
+}
+endsnippet
+
+snippet trait "Trait declaration template" b
+<?php
+
+namespace `!p snip.rv = getNamespace()`
+
+trait ${1:`!p snip.rv=snip.basename`}
+{
+	$0
+}
+endsnippet
+
+snippet model "Model declaration template" b
+<?php
+
+namespace `!p snip.rv = getNamespace()`
+
+use Illuminate\Database\Eloquent\Model;
+
+class ${1:`!p snip.rv=snip.basename`} extends Model
+{
+	/**
+	 * The attributes that aren't mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $guarded['id'];
+
+	$0
+}
+endsnippet
+
+snippet controller "Controller declaration template" b
+<?php
+
+namespace `!p snip.rv = getNamespace()`
+
+use App\Http\Controllers\Controller;
+
+class ${1:`!p snip.rv=snip.basename`} extends Controller
+{
+	public function index() 
+	{
+		// $0
+	}
+
+	public function show($id) 
+	{
+		//
+	}
+
+	public function create()
+	{
+		//
+	}
+
+	public function edit($id)
+	{
+		//
+	}
+
+	public function store(Request $request)
+	{
+		//
+	}
+
+	public function update(Request $request)
+	{
+		//
+	}
+
+	public function destroy()
+	{
+		//
+	}
+	$0
+}
+endsnippet
+
+snippet met "Public function" b
+/**
+ * ${3:undocumented function}
+ * @TODO documentation.needed
+
+ * @return
+ */
+public function ${1:name}()
+{
+	$0
+}
+endsnippet
+
+snippet pmet "Protected function" b
+/**
+ * ${3:undocumented function}
+ * @TODO documentation.needed
+
+ * @return
+ */
+protected function ${1:name}()
+{
+	$0
+}
+endsnippet
+
+snippet /** "Add block comment"
+/**
+ * ${1}
+ *
+ *
+ */
+endsnippet
+snippet smet "Protected function" b
+/**
+ * ${3:undocumented function}
+ * @TODO documentation.needed
+
+ * @return
+ */
+static function ${1:name}()
+{
+	$0
+}
+endsnippet
+
+snippet test "Test Funtion" b
+/** @test */
+public function it_${1}()
+{
+	${2}
+}
+endsnippet
