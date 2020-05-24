@@ -52,7 +52,7 @@ class ${1:`!p snip.rv=snip.basename`} extends Model
 	 *
 	 * @var array
 	 */
-	protected $guarded['id'];
+	protected $guarded = ['id'];
 
 	$0
 }
@@ -63,6 +63,7 @@ snippet controller "Controller declaration template" b
 
 namespace `!p snip.rv = getNamespace()`
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ${1:`!p snip.rv=snip.basename`} extends Controller
@@ -105,11 +106,24 @@ class ${1:`!p snip.rv=snip.basename`} extends Controller
 }
 endsnippet
 
+snippet scope "A model scope" b
+/** 
+ * Scope for
+ *
+ * @param $query
+ * @return mixed
+ */
+ public function scope${1:Name}($query) 
+ {
+ 	return $query->where();
+ }
+endsnippet
+
 snippet met "Public function" b
 /**
  * ${3:undocumented function}
  * @TODO documentation.needed
-
+ *
  * @return
  */
 public function ${1:name}()
@@ -122,7 +136,7 @@ snippet pmet "Protected function" b
 /**
  * ${3:undocumented function}
  * @TODO documentation.needed
-
+ *
  * @return
  */
 protected function ${1:name}()
@@ -142,7 +156,7 @@ snippet smet "Protected function" b
 /**
  * ${3:undocumented function}
  * @TODO documentation.needed
-
+ *
  * @return
  */
 static function ${1:name}()
