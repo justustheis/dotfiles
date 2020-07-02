@@ -78,8 +78,8 @@ alias tags="ctags -R --exclude=.git --exclude=node_modules "
 alias speedtest="speedtest-net"
 alias kc="bash ~/tools/keychain.sh"
 test() {
-  	if [ -f vendor/bin/phpunit ]; then
-    		vendor/bin/phpunit "$@"
+  	if [ -f vendor/bin/paratest ]; then
+    		vendor/bin/paratest "$@"
 	fi
 }
 alias wetter="curl http://wttr.in"
