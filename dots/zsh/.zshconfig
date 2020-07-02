@@ -19,6 +19,7 @@ plugins=(
   copyfile
 )
 source ~/dotfiles/dots/zsh/theme.zsh
+export LANG="de_DE.UTF-8"
 #if [[ "$TERM" =~ "screen".* ]]; then
 #else
 #neofetch --block_width 40 --block_height 1 --block_range 5 5 --colors 1 4 1 5 1 6 Hallo --backend iterm2  --source ~/dotfiles/assets/logo.png --size 300px --crop_mode auto --yoffset 38
