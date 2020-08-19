@@ -21,14 +21,23 @@ fail () {
 
 backup() {
 	info "backup old dotfiles"
-	mkdir -p ~/backup_dotfiles/$datetime/
-	mv ~/.aliases ~/backup_dotfiles/$datetime/.aliases 
-	mv ~/.gitconfig ~/backup_dotfiles/$datetime/.gitconfig
-	mv ~/.tmux.conf ~/backup_dotfiles/$datetime/.tmux.conf
-	mv ~/.vimrc ~/backup_dotfiles/$datetime/.vimrc			
-	mv  ~/.vim ~/backup_dotfiles/$datetime/.vim
-	mv  ~/.zshconfig ~/backup_dotfiles/$datetime/.zshconfig
+	mkdir -p ~/.backup_dotfiles/$datetime/
+	mv ~/.aliases ~/.backup_dotfiles/$datetime/.aliases 
+	mv ~/.gitconfig ~/.backup_dotfiles/$datetime/.gitconfig
+	mv ~/.tmux.conf ~/.backup_dotfiles/$datetime/.tmux.conf
+	mv ~/.vimrc ~/.backup_dotfiles/$datetime/.vimrc			
+	mv  ~/.vim ~/.backup_dotfiles/$datetime/.vim
+	mv  ~/.config/vifm ~/.backup_dotfiles/$datetime/vifm
+    mv ~/.tmux ~/.backup_dotfiles/$datetime/.vim
+	mv  ~/.zshconfig ~/.backup_dotfiles/$datetime/.zshconfig
 	success
+}
+
+updateDotfiles() {
+    info "updating dotfiles from git"
+    cd ~/dotfiles
+    git pull
+    success
 }
 
 createFolders() {
@@ -56,6 +65,7 @@ createLinks() {
 setupVim() {
 	info "setup vim"
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginClean +qall
 	vim +PluginInstall +qall
 	success
 }
@@ -68,9 +78,10 @@ setupZsh() {
 }
 
 
-info "Welcome to dotfile setup"
+info "Welcome to dotfile setup/update"
 sleep 4
 backup
+updateDotfiles
 createFolders
 createLinks
 setupVim
