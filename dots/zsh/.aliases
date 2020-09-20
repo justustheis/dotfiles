@@ -120,13 +120,12 @@ alias gp="git push"
 ##############################################
 ########## Shortcuts for ssh connects ########
 ##############################################
-alias cus-web01="ssh justustheis@cus-web01.ds-systems.eu -i ~/.ssh/jt_ds_rsa -p 2234" 
-alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/jt_ds_rsa"
+alias cus-web01="ssh justustheis@cus-web01.ds-systems.eu -i ~/.ssh/id_rsa -p 2234" 
+alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/id_rsa"
 alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
-alias pihole01="ssh justustheis@pihole01.trier -i ~/.ssh/jt_ds_rsa" 
-alias hera="ssh root@hera.trier -i ~/.ssh/jt_ds_rsa" 
-alias monitoring="ssh justustheis@monitoring.trier -i ~/.ssh/jt_ds_rsa" 
-alias intranet-dev="ssh justustheis@intranet.trier -i ~/.ssh/jt_ds_rsa" 
+alias pihole01="ssh justustheis@pihole01.trier -i ~/.ssh/id_rsa" 
+alias hera="ssh root@hera.trier -i ~/.ssh/id_rsa" 
+alias monitoring="ssh justustheis@monitoring.trier -i ~/.ssh/id_rsa" 
 
 
 
