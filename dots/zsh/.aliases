@@ -126,6 +126,9 @@ alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
 alias pihole01="ssh justustheis@pihole01.trier -i ~/.ssh/id_rsa" 
 alias hera="ssh root@hera.trier -i ~/.ssh/id_rsa" 
 alias dev="ssh justustheis@dev.trier -i ~/.ssh/id_rsa" 
+alias dsgateway="ssh justustheis@dsgateway.trier -i ~/.ssh/id_rsa" 
+alias vpn="ssh justustheis@vpn.trier -i ~/.ssh/id_rsa" 
+alias homebridge="ssh justustheis@homebridge.trier -i ~/.ssh/id_rsa" 
 
 
 
