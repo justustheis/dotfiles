@@ -8,17 +8,10 @@
 
 **Ubuntu**
 ``` bash
-$ sudo apt install git
-$ sudo apt install ctags
-$ sudo apt install grc
-$ sudo apt install zsh
-$ sudo apt install composer
-$ sudo apt install vifm
+$ sudo apt install git ctags grc zsh composer vifm tmux
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 $ composer global require "squizlabs/php_codesniffer=*"
 $ composer global require friendsofphp/php-cs-fixer
 $ git clone https://github.com/justustheis/dotfiles.git
-$ cd ~/dotfiles/scripts
-$ sudo chmod a+x setup.sh
-$ ./setup.sh
+$ bash ~/dotfiles/scripts/setup.sh
 ```
