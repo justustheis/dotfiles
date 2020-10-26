@@ -124,6 +124,7 @@ alias cus-web01="ssh justustheis@cus-web01.ds-systems.eu -i ~/.ssh/id_rsa -p 223
 alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/id_rsa"
 alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
 alias pihole01="ssh justustheis@pihole01.internal.j-theis.de -i ~/.ssh/id_rsa" 
+alias pihole02="ssh justustheis@pihole02.internal.j-theis.de -i ~/.ssh/id_rsa" 
 alias hera="ssh root@hera.internal.j-theis.de -i ~/.ssh/id_rsa" 
 alias dev="ssh justustheis@dev.internal.j-theis.de -i ~/.ssh/id_rsa" 
 alias dsgateway="ssh justustheis@dsgateway.internal.j-theis.de -i ~/.ssh/id_rsa" 
