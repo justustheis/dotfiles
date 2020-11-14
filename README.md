@@ -8,7 +8,7 @@
 
 **Ubuntu**
 ``` bash
-$ sudo apt install git ctags grc zsh composer vifm tmux
+$ sudo apt install git exuberant-ctags grc zsh composer vifm tmux
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 $ composer global require "squizlabs/php_codesniffer=*"
 $ composer global require friendsofphp/php-cs-fixer
