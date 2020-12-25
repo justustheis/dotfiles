@@ -13,7 +13,6 @@ set noruler                                         "Don't show the line number 
 set laststatus=0                                    "No Statusline for last window
 set noshowcmd                                       "No partial commands
 set shortmess=F                                     "Avoid 'hit-enter' prompts 
-"set mouse=a                                         "Enable mouse support
 
 
 
