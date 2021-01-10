@@ -108,6 +108,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 
+"----------------Kite Auto Completion--------------"
+let g:kite_supported_languages = ['*']
 
 
 "----------------ctags--------------"
