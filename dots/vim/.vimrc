@@ -115,6 +115,7 @@ let g:kite_supported_languages = ['*']
 "----------------ctags--------------"
 set statusline+=%{gutentags#statusline()}
 let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules", "*vendor/*/test*", "*vendor/*/Test*", "vendor/*/Test", "vendor/*test", "bootstrap/cache"]
+let g:gutentags_ctags_executable  = "exctags"
 "open underlying path
 nmap <Leader>o <C-]>
 
@@ -129,7 +130,7 @@ let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by defaul
 let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
 let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_args = "--standard=psr2"
+let g:phpqa_codesniffer_args = "--standard=psr2 --exclude=Generic.Files.LineLength"
 
 
 
