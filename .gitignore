@@ -191,3 +191,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 dots/vifm/vifminfo
+dots/vifm/vifminfo.json
