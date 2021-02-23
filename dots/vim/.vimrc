@@ -1,6 +1,7 @@
 set nocompatible              						"We want the latest Vim settings/options.
 
 so ~/.vim/plugins.vim
+so ~/.vimlocal
 
 syntax enable
 set backspace=indent,eol,start                      "Make backspace behave like every other editor.
@@ -115,7 +116,6 @@ let g:kite_supported_languages = ['*']
 "----------------ctags--------------"
 set statusline+=%{gutentags#statusline()}
 let g:gutentags_ctags_exclude = ["storage", "public", ".git", "node_modules", "*vendor/*/test*", "*vendor/*/Test*", "vendor/*/Test", "vendor/*test", "bootstrap/cache"]
-let g:gutentags_ctags_executable  = "exctags"
 "open underlying path
 nmap <Leader>o <C-]>
 
