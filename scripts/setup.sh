@@ -64,6 +64,7 @@ createLinks() {
 
 setupVim() {
 	info "setup vim"
+    touch ~/.vimlocal
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginClean +qall
 	vim +PluginInstall +qall
