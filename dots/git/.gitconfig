@@ -8,8 +8,10 @@
 [color]
 	ui = auto
 [color "branch"]
-  upstream = cyan
+    upstream = cyan
 [commit]
 	gpgSign = true
 [gpg]
 	program = gpg
+[pull]
+	rebase = false
