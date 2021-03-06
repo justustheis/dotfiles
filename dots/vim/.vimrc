@@ -159,6 +159,12 @@ nmap <Leader>gs :!git status<cr>
 
 
 
+"-------------- Vim Wiki --------------------"
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+
+
+
 "--------------Auto import use ----------------"
 function! IPhpInsertUse()
     call PhpInsertUse()

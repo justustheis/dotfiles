@@ -52,5 +52,8 @@ Plugin 'vim-airline/vim-airline-themes'
 " PHP Sniffer
 Plugin 'joonty/vim-phpqa'
 
+" VimWiki
+Plugin 'vimwiki/vimwiki'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
