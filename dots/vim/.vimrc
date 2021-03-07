@@ -161,6 +161,12 @@ nmap <Leader>gs :!git status<cr>
 
 "-------------- Vim Wiki --------------------"
 let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_markdown_link_ext = 1
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
+augroup end
 
 
 
