@@ -93,6 +93,7 @@ nmap <Leader>t :TestNearest<cr>
 nmap <Leader>ts :TestSuite<cr>
 nmap <Leader>tf :TestFile<cr>
 nmap <Leader>tl :TestLast<cr>
+nmap <Leader>s :Rg 
 
 "Switch between buffers
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
@@ -109,8 +110,16 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 
-"----------------Kite Auto Completion--------------"
-let g:kite_supported_languages = ['*']
+
+"----------------Toggle Quickfix --------------"
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+nnoremap <silent> <Leader>c :call ToggleQuickFix()<cr>
 
 
 "----------------ctags--------------"
