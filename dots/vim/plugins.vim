@@ -55,5 +55,8 @@ Plugin 'joonty/vim-phpqa'
 " VimWiki
 Plugin 'vimwiki/vimwiki'
 
+" Search Plugin
+Plugin 'jremmen/vim-ripgrep'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
