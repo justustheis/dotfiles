@@ -169,7 +169,7 @@ nmap <Leader>gs :!git status<cr>
 
 
 "-------------- Vim Wiki --------------------"
-let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/wiki-data/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext = 1
 augroup vimwikigroup
     autocmd!
