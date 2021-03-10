@@ -6,7 +6,7 @@
 - **[grc](https://launchpad.net/ubuntu/+source/grc)**
 - **[zsh](https://ohmyz.sh)**
 
-**Ubuntu**
+**Ubuntu >= 20.04**
 ``` bash
 $ sudo apt install git exuberant-ctags grc zsh composer vifm tmux ripgrep
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
