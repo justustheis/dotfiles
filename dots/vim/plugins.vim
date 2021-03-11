@@ -55,6 +55,9 @@ Plugin 'joonty/vim-phpqa'
 " VimWiki
 Plugin 'vimwiki/vimwiki'
 
+" Calendar 
+Plugin 'mattn/calendar-vim'
+
 " Search Plugin
 Plugin 'jremmen/vim-ripgrep'
 
