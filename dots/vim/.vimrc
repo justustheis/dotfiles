@@ -110,16 +110,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 
-"----------------Toggle Quickfix --------------"
-function! ToggleQuickFix()
-    if empty(filter(getwininfo(), 'v:val.quickfix'))
-        copen
-    else
-        cclose
-    endif
-endfunction
-nnoremap <silent> <Leader>t :call ToggleQuickFix()<cr>
-
 
 "----------------ctags--------------"
 set statusline+=%{gutentags#statusline()}
@@ -166,30 +156,6 @@ nmap <Leader>gs :!git status<cr>
 
 
 
-
-"-------------- Vim Wiki --------------------"
-let g:vimwiki_list = [{'path': '~/wiki-data/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_markdown_link_ext = 1
-autocmd BufNewFile ~/wiki-data/diary/[0-9]*.md :silent 0r !echo "\# Daily Log vom `date +'\%d.\%m.\%Y'`"
-augroup vimwikigroup
-    autocmd!
-    " automatically update links on read diary
-    autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
-augroup end
-function! ToggleCalendar()
-  execute ":Calendar"
-  if exists("g:calendar_open")
-    if g:calendar_open == 1
-      execute "q"
-      unlet g:calendar_open
-    else
-      g:calendar_open = 1
-    end
-  else
-    let g:calendar_open = 1
-  end
-endfunction
-nmap <Leader>c :call ToggleCalendar()<cr>
 
 
 

@@ -52,7 +52,6 @@ alias hosts="sudo vim /etc/hosts"
 alias aliases="vim ~/.aliases"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
-alias notes="vim ~/notes.md"
 
 
 
@@ -124,12 +123,11 @@ alias gp="git push"
 alias cus-web01="ssh justustheis@cus-web01.ds-systems.eu -i ~/.ssh/id_ed25519 -p 2234" 
 alias cus-dns01="ssh justustheis@cus-dns01.ds-systems.eu -p 2234 -i ~/.ssh/id_ed25519"
 alias php-legacy="ssh root@hosting-php-legacy.scholtka-group.de"
-alias pihole01="ssh justustheis@pihole01.internal.j-theis.de -i ~/.ssh/id_ed25519" 
-alias pihole02="ssh justustheis@pihole02.internal.j-theis.de -i ~/.ssh/id_ed25519" 
+alias pihole="ssh justustheis@pihole.internal.j-theis.de -i ~/.ssh/id_ed25519" 
 alias hera="ssh root@hera.internal.j-theis.de -i ~/.ssh/id_ed25519" 
 alias dev="ssh justustheis@dev.internal.j-theis.de -i ~/.ssh/id_ed25519" 
 alias homebridge="ssh justustheis@homebridge.internal.j-theis.de -i ~/.ssh/id_ed25519" 
-alias wiki="ssh justustheis@wiki.j-theis.de -i ~/.ssh/id_ed25519" 
+alias wiki="ssh justustheis@wiki.j-theis.de -i ~/.ssh/id_ed25519 -p 2234" 
 
 
 
