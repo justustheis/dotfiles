@@ -128,6 +128,7 @@ alias hera="ssh root@hera.internal.j-theis.de -i ~/.ssh/id_ed25519"
 alias dev="ssh justustheis@dev.internal.j-theis.de -i ~/.ssh/id_ed25519" 
 alias homebridge="ssh justustheis@homebridge.internal.j-theis.de -i ~/.ssh/id_ed25519" 
 alias wiki="ssh justustheis@wiki.j-theis.de -i ~/.ssh/id_ed25519 -p 2234" 
+alias zeus="ssh justustheis@zeus.internal.j-theis.de"
 
 
 
