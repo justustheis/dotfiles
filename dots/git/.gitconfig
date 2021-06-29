@@ -2,16 +2,11 @@
 	name = Justus Theis
 	email = kontakt@j-theis.de
 	username = justustheis
-	signingkey = F4B1FC7B6ABD4F0927A1D2475526C05998589236
 [core]
 	editor = vim
 [color]
 	ui = auto
 [color "branch"]
     upstream = cyan
-[commit]
-	gpgSign = true
-[gpg]
-	program = gpg
 [pull]
 	rebase = false
